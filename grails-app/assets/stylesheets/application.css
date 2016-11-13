@@ -17,21 +17,21 @@
     position: absolute;
     color: white;
     top: 35%;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
     left: 50%;
+    text-align: center;
 }
 
 .mainContent .title {
-  font-size: 5em;
+  font-size: 300%;
 }
 
 .mainContent .buttonsZone {
   text-align: center;
-  margin-top: 5%;
 }
 
 .mainContent .buttonsZone .btn{
+  margin-top: 5%;
   font-size: 2em;
   color: white;
   border: 0px solid #FFF;
