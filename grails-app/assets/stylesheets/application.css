@@ -13,6 +13,8 @@
 *= require mobile
 *= require_self
 */
+
+/*home*/
 .mainContent {
     position: absolute;
     color: white;
@@ -60,6 +62,26 @@
   height: 100%;
 }
 
+/*login*/
+.loginForm {
+  padding: 2%;
+}
+
+.loginForm > div > div{
+  margin-bottom: 0.5%;
+}
+
+.loginForm label {
+  text-align: right;
+  width: 25%;
+  margin-right: 2%;
+}
+
+.loginForm input {
+
+}
+
+/*common*/
 .footer {
   margin-top: 0;
 }

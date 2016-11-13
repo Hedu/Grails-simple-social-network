@@ -53,7 +53,7 @@
           <span class="title">Bienvenidos a Social Grails</span>
           <div class="buttonsZone">
             <g:link class="create btn" controller="user" action="create">Registrarse</g:link>
-            <g:link class="create btn" controller="user" action="create">Entrar</g:link>
+            <g:link class="create btn" controller="login">Entrar</g:link>
           </div>
         </div>
     </div>
