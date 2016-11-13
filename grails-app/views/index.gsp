@@ -48,8 +48,14 @@
     </content>
 
     <div class="mainPictureDiv" role="presentation">
-        <img class="mainPicture" src="<g:createLinkTo dir="images" file="summer-time.jpg" />" />
-        <span class="mainText">Bienvenidos a Social Grails</span>
+        <%--<img class="mainPicture" src="<g:createLinkTo dir="images" file="summer-time.jpg" />" /--%>
+        <div class="mainContent">
+          <span class="title">Bienvenidos a Social Grails</span>
+          <div class="buttonsZone">
+            <g:link class="create btn" controller="user" action="create">Registrarse</g:link>
+            <g:link class="create btn" controller="user" action="create">Entrar</g:link>
+          </div>
+        </div>
     </div>
 
     <g:if test="${session.user?.admin == true}">

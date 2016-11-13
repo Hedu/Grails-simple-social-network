@@ -13,20 +13,53 @@
 *= require mobile
 *= require_self
 */
-.mainText {
+.mainContent {
     position: absolute;
     color: white;
-    top: 30%;
+    top: 35%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     left: 50%;
-    font-size: 3em
 }
 
-.mainPicture {
-  width: 100%;
+.mainContent .title {
+  font-size: 5em;
+}
+
+.mainContent .buttonsZone {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.mainContent .buttonsZone .btn{
+  font-size: 2em;
+  color: white;
+  border: 0px solid #FFF;
+  border-radius: 500px;
+  padding: 0.7% 8%;
+  text-decoration: none;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: #48802c;
+}
+
+.mainContent .buttonsZone .btn:hover{
+  background-color: #4D8618;
 }
 
 .mainPictureDiv {
   position: relative;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("/assets/summer-time.jpg") center no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  margin-top: 0;
 }
