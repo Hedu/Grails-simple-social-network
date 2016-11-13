@@ -13,3 +13,20 @@
 *= require mobile
 *= require_self
 */
+.mainText {
+    position: absolute;
+    color: white;
+    top: 30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: 3em
+}
+
+.mainPicture {
+  width: 100%;
+}
+
+.mainPictureDiv {
+  position: relative;
+}
