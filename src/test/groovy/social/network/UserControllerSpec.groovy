@@ -10,9 +10,12 @@ class UserControllerSpec extends Specification {
     def populateValidParams(params) {
         assert params != null
 
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
-        assert false, "TODO: Provide a populateValidParams() implementation for this generated test suite"
+        params['firstName'] = "firstName"
+        params['lastName'] = "lastName"
+        params['email'] = "email@email.com"
+        params['passwordHash'] = "passwordHash"
+        params['gender'] = "Male"
+        params['birthDay'] = new Date()
     }
 
     void "Test the index action returns the correct model"() {
@@ -49,6 +52,7 @@ class UserControllerSpec extends Specification {
         when:"The save action is executed with a valid instance"
             response.reset()
             populateValidParams(params)
+            println "params: $params"
             user = new User(params)
 
             controller.save(user)
