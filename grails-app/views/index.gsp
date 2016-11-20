@@ -36,23 +36,31 @@
                 <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
             </ul>
         </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                    <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
-                </g:each>
-            </ul>
-        </li>
         --%>
+        <g:if test="${session['user']}">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${session.user.firstName} ${session.user.lastName}<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><g:link controller="login" action="logout">Cerrar sesión</g:link></li>
+                </ul>
+            </li>
+        </g:if>
     </content>
 
     <div class="mainPictureDiv" role="presentation">
-        <img class="mainPicture" src="<g:createLinkTo dir="images" file="summer-time.jpg" />" />
-        <span class="mainText">Bienvenidos a Social Grails</span>
+        <%--<img class="mainPicture" src="<g:createLinkTo dir="images" file="summer-time.jpg" />" /--%>
+        <div class="mainContent">
+          <span class="title">Bienvenidos a Social Grails</span>
+          <g:if test="${!session.user}">
+              <div class="buttonsZone">
+                <g:link class="create btn" controller="user" action="create">Registrarse</g:link>
+                <g:link class="create btn" controller="login">Entrar</g:link>
+              </div>
+          </g:if>
+        </div>
     </div>
 
-    <g:if test="${session.user?.admin == true}">
+    <g:if test="${session['user']?.admin == true}">
       <div id="content" role="main">
         <section class="row colset-2-its">
               <div id="controllers" role="navigation">
