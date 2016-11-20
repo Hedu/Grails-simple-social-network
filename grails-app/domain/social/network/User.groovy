@@ -8,6 +8,7 @@ class User {
     String passwordHash
     String gender
     Date birthDay
+    boolean admin
     static hasMany = [friends: User]
 
     static constraints = {
@@ -17,5 +18,6 @@ class User {
       passwordHash password: true, size: 8..20, blank: false, nullable: false
       gender inList: ["Male", "Female"]
       friends display: false
+      admin nullable: false, default: false, display: false
     }
 }
