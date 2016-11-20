@@ -6,12 +6,12 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-      <g:form action="login">
+      <g:form action="login" method="POST">
           <div class="loginForm">
               <div>
                 <div>
                   <label for="email">Email</label>
-                  <g:textField name="email"/>
+                  <g:textField name="email" value="${emailMap?.email}"/>
                 </div>
                 <div>
                   <label for="password">password</label>
